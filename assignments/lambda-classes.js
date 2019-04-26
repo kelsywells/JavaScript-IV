@@ -28,10 +28,10 @@ class Student extends Person {
     }
 
     PRAssignment(subject) {
-        return `${this.name} has submitted a PR for ${this.subject}.`
+        return `${this.name} has submitted a PR for ${subject}.`
     }
     sprintChallenge(subject) {
-        return `${this.name} has begun sprint challenge on ${this.subject}.`
+        return `${this.name} has begun sprint challenge on ${subject}.`
     }
 }
 
@@ -44,6 +44,13 @@ const student1 = new Student ({
     favSubjects: ['math', 'css', 'javascript']
 })
 
+console.log(listSubjects([0]));
+console.log(listSubjects([1]));
+console.log(listSubjects([2]));
+
+console.log(student1.PRAssignment('CSS'));
+
+console.log(student1.sprintChallenge('Javascript'))
 
 
 class Instructor extends Person {
@@ -97,18 +104,16 @@ class ProjectManager extends Instructor {
     }
 }
 
-
-
-const projectManager1 = new ProjectManager {
+const projectManager1 = new ProjectManager ({
     name: 'barb',
     age: 35,
     location: 'houston',
     gender: 'female',
     gradClassName: 'CS1',
     favInstructor: 'keiran',
-}
+})
 
 console.log(projectManager1.standUp('webPT'));
 
-console.log(projectManager1.debugsCode('franny', 'js'));
+console.log(projectManager1.debugsCode('franny', 'javascript'));
 
